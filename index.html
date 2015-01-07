@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="wrapper">
+
+    <div class="grid-items-lines">
+      
+      <a class="grid-item grid-item-big .right-cover">
+        <img class="icon-lg" src="images/unicorn-icon.svg">
+        <h1>I'm a designer, developer, and entrepreneur.</h1>
+        <p>Click to learn more about me</p>
+      </a>
+
+      {% for post in site.posts %}
+        <a href="{{ post.url | prepend: site.baseurl }}" class="grid-item">
+          <img class="icon-lg" src="images/unicorn-icon.svg">
+          <h1>{{ post.title }}</h1>
+          <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+        </a>
+      {% endfor %}
+
+      <div class="right-cover"></div>
+      <div class="bottom-cover"></div>
+
+    </div>
+
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+  </div>
+
+</div>
